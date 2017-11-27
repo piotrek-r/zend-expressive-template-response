@@ -1,0 +1,28 @@
+{
+  "name": "piotrek-r/zend-expressive-template-response",
+  "version": "0.1.0",
+  "description": "Template response and middleware for the Zend Expressive framework",
+  "type": "library",
+  "homepage": "https://github.com/piotrek-r/zend-expressive-template-response",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Piotr Rybałtowski",
+      "email": "piotrek@owl-labs.com",
+      "homepage": "http://www.piotr.rybaltowski.com/"
+    }
+  ],
+  "require": {
+    "php": "^7.1",
+    "zendframework/zend-diactoros": "^1.6",
+    "fig/http-message-util": "^1.1",
+    "http-interop/http-middleware": "^0.4.1",
+    "psr/container": "^1.0",
+    "zendframework/zend-expressive-template": "^1.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "PiotrekR\\TemplateResponse\\": "src/"
+    }
+  }
+}
