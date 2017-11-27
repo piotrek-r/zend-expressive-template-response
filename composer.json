@@ -1,6 +1,5 @@
 {
   "name": "piotrek-r/zend-expressive-template-response",
-  "version": "0.1.0",
   "description": "Template response and middleware for the Zend Expressive framework",
   "type": "library",
   "homepage": "https://github.com/piotrek-r/zend-expressive-template-response",
