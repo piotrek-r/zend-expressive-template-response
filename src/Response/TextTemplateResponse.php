@@ -41,11 +41,45 @@ class TextTemplateResponse extends TextResponse
     }
 
     /**
+     * @param string $templateName
+     * @return TextTemplateResponse
+     */
+    public function withTemplateName(string $templateName): TextTemplateResponse
+    {
+        $c = clone $this;
+        $c->templateName = $templateName;
+        return $c;
+    }
+
+    /**
      * @return string
      */
     public function templateName(): string
     {
         return $this->templateName;
+    }
+
+    /**
+     * @param array $variables
+     * @return TextTemplateResponse
+     */
+    public function withVariables(array $variables): TextTemplateResponse
+    {
+        $c = clone $this;
+        $c->variables = $variables;
+        return $c;
+    }
+
+    /**
+     * @param string $name
+     * @param mixed $value
+     * @return TextTemplateResponse
+     */
+    public function withVariable(string $name, $value): TextTemplateResponse
+    {
+        $c = clone $this;
+        $c->variables[$name] = $value;
+        return $c;
     }
 
     /**

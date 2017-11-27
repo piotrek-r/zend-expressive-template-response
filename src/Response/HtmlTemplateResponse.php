@@ -41,11 +41,45 @@ class HtmlTemplateResponse extends HtmlResponse
     }
 
     /**
+     * @param string $templateName
+     * @return HtmlTemplateResponse
+     */
+    public function withTemplateName(string $templateName): HtmlTemplateResponse
+    {
+        $c = clone $this;
+        $c->templateName = $templateName;
+        return $c;
+    }
+
+    /**
      * @return string
      */
     public function templateName(): string
     {
         return $this->templateName;
+    }
+
+    /**
+     * @param array $variables
+     * @return HtmlTemplateResponse
+     */
+    public function withVariables(array $variables): HtmlTemplateResponse
+    {
+        $c = clone $this;
+        $c->variables = $variables;
+        return $c;
+    }
+
+    /**
+     * @param string $name
+     * @param mixed $value
+     * @return HtmlTemplateResponse
+     */
+    public function withVariable(string $name, $value): HtmlTemplateResponse
+    {
+        $c = clone $this;
+        $c->variables[$name] = $value;
+        return $c;
     }
 
     /**
